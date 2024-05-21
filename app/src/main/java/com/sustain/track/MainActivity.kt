@@ -22,9 +22,6 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.sustain.track.ui.navigation.BottomNavItem
 import com.sustain.track.ui.navigation.bottomNavList
-import com.sustain.track.ui.screens.home.SustainHomeScreen
-import com.sustain.track.ui.screens.spend.TransactionWiseCarbonFootprint
-import com.sustain.track.ui.screens.tips.TipsSuggestion
 import com.sustain.track.ui.theme.SustainTrackTheme
 
 class MainActivity : ComponentActivity() {
@@ -67,13 +64,10 @@ class MainActivity : ComponentActivity() {
                             navController = navController, startDestination = bottomNavList[0].route
                         ) {
                             composable(route = BottomNavItem.Home.route) {
-                                SustainHomeScreen()
+                                Text(text = BottomNavItem.Home.label)
                             }
-                            composable(route = BottomNavItem.Spend.route) {
-                                TransactionWiseCarbonFootprint()
-                            }
-                            composable(route = BottomNavItem.Tips.route) {
-                                TipsSuggestion()
+                            composable(route = BottomNavItem.Track.route) {
+                                Text(text = BottomNavItem.Track.label)
                             }
                         }
                     }

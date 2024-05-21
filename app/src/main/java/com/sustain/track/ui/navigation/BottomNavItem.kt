@@ -9,13 +9,11 @@ import androidx.compose.ui.graphics.vector.ImageVector
 
 sealed class BottomNavItem(val route: String, val icon: ImageVector, val label: String) {
     data object Home : BottomNavItem("home", Icons.Default.Home, "Home")
-    data object Spend : BottomNavItem("spend", Icons.Default.Search, "Spend Analysis")
-    data object Tips : BottomNavItem("tips", Icons.Default.Person, "Sustainability")
+    data object Track : BottomNavItem("track", Icons.Default.Search, "Track")
 }
 
 
 val bottomNavList = listOf(
     BottomNavItem.Home,
-    BottomNavItem.Spend,
-    BottomNavItem.Tips
+    BottomNavItem.Track,
 )
