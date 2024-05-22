@@ -5,6 +5,7 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.BadgedBox
 import androidx.compose.material3.Icon
@@ -20,6 +21,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.sustain.track.ui.screens.home.TransactionsHome
 import com.sustain.track.ui.navigation.BottomNavItem
 import com.sustain.track.ui.navigation.bottomNavList
 import com.sustain.track.ui.theme.SustainTrackTheme
@@ -59,12 +61,13 @@ class MainActivity : ComponentActivity() {
                         }
                     }
                 }) { innerPadding ->
-                    Box(modifier = Modifier.padding(innerPadding)) {
+                    Box(modifier = Modifier.padding(innerPadding).fillMaxSize()) {
                         NavHost(
                             navController = navController, startDestination = bottomNavList[0].route
                         ) {
                             composable(route = BottomNavItem.Home.route) {
-                                Text(text = BottomNavItem.Home.label)
+//                                Text(text = BottomNavItem.Home.label)
+                                TransactionsHome()
                             }
                             composable(route = BottomNavItem.Track.route) {
                                 Text(text = BottomNavItem.Track.label)
