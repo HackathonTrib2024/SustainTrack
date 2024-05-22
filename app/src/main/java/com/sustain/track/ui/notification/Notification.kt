@@ -5,6 +5,7 @@ import android.app.NotificationManager
 import android.content.Context
 import android.os.Build
 import androidx.core.app.NotificationCompat
+import com.sustain.track.R
 
 object NotificationUtils {
 
@@ -14,7 +15,7 @@ object NotificationUtils {
         val builder = NotificationCompat.Builder(context, CHANNEL_ID)
             .setContentTitle(title)
             .setContentText(content)
-            //.setSmallIcon(R.drawable.notification_icon)
+            .setSmallIcon(R.drawable.car)
 
         val notificationManager =
             context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
@@ -22,7 +23,7 @@ object NotificationUtils {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channel = NotificationChannel(
                 CHANNEL_ID,
-                "Channel Name",
+                "Transactions",
                 NotificationManager.IMPORTANCE_DEFAULT
             )
             notificationManager.createNotificationChannel(channel)
