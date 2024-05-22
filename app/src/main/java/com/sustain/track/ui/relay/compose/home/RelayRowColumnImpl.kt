@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.sustain.track.ui.relay.compose
+package com.sustain.track.ui.relay.compose.home
 
 import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.Stable
@@ -376,7 +376,7 @@ internal sealed class CrossAxisAlignmentImpl {
          * parameter using [AlignmentLineProvider].
          */
         internal fun Relative(alignmentLineProvider: AlignmentLineProvider):
-            CrossAxisAlignmentImpl = AlignmentLineCrossAxisAlignmentImpl(alignmentLineProvider)
+                CrossAxisAlignmentImpl = AlignmentLineCrossAxisAlignmentImpl(alignmentLineProvider)
 
         /**
          * Align children with vertical alignment.

@@ -34,15 +34,14 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.sustain.track.R
 import com.sustain.track.modal.home.IconConfig
 import com.sustain.track.modal.home.TransactionItem
-import com.sustain.track.ui.relay.compose.BorderAlignment
-import com.sustain.track.ui.relay.compose.BoxScopeInstance.boxAlign
-import com.sustain.track.ui.relay.compose.CrossAxisAlignment
-import com.sustain.track.ui.relay.compose.MainAxisAlignment
-import com.sustain.track.ui.relay.compose.RelayContainer
-import com.sustain.track.ui.relay.compose.RelayContainerArrangement
-import com.sustain.track.ui.relay.compose.RelayContainerScope
-import com.sustain.track.ui.relay.compose.RelayText
-import com.sustain.track.ui.relay.compose.RelayVector
+import com.sustain.track.ui.relay.compose.home.BorderAlignment
+import com.sustain.track.ui.relay.compose.home.CrossAxisAlignment
+import com.sustain.track.ui.relay.compose.home.MainAxisAlignment
+import com.sustain.track.ui.relay.compose.home.RelayContainer
+import com.sustain.track.ui.relay.compose.home.RelayContainerArrangement
+import com.sustain.track.ui.relay.compose.home.RelayContainerScope
+import com.sustain.track.ui.relay.compose.home.RelayText
+import com.sustain.track.ui.relay.compose.home.RelayVector
 
 /**
  * TransactionsHome

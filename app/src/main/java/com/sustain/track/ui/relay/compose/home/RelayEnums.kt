@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.sustain.track.ui.relay.compose
+package com.sustain.track.ui.relay.compose.home
 
 // How a group's children should be laid out.
 enum class RelayContainerArrangement {

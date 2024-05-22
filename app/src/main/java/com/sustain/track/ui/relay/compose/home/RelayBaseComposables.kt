@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.sustain.track.ui.relay.compose
+package com.sustain.track.ui.relay.compose.home
 
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*

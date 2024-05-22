@@ -29,6 +29,7 @@ import com.sustain.track.ui.navigation.BottomNavItem
 import com.sustain.track.ui.navigation.bottomNavList
 import com.sustain.track.ui.notification.NotificationUtils
 import com.sustain.track.ui.screens.home.TransactionsHome
+import com.sustain.track.ui.screens.track.Track
 import com.sustain.track.ui.theme.SustainTrackTheme
 
 class MainActivity : ComponentActivity() {
@@ -96,11 +97,10 @@ class MainActivity : ComponentActivity() {
                             navController = navController, startDestination = bottomNavList[0].route
                         ) {
                             composable(route = BottomNavItem.Home.route) {
-//                                Text(text = BottomNavItem.Home.label)
                                 TransactionsHome()
                             }
                             composable(route = BottomNavItem.Track.route) {
-                                Text(text = BottomNavItem.Track.label)
+                                Track()
                             }
                         }
                     }
