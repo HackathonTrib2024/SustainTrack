@@ -33,7 +33,6 @@ import com.sustain.track.ui.notification.NotificationUtils
 import com.sustain.track.ui.screens.TopBar
 import com.sustain.track.ui.screens.home.NewTransactionsHome
 import com.sustain.track.ui.screens.track.NewTrackScreen
-import com.sustain.track.ui.screens.track.Track
 import com.sustain.track.ui.theme.SustainTrackTheme
 
 class MainActivity : ComponentActivity() {
@@ -105,7 +104,6 @@ class MainActivity : ComponentActivity() {
                                 NewTransactionsHome()
                             }
                             composable(route = BottomNavItem.Track.route) {
-//                                Track()
                                 NewTrackScreen()
                             }
                         }

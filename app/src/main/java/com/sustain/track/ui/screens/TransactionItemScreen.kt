@@ -86,7 +86,7 @@ fun TransactionItemScreen(
             }
             Image(
                 modifier = Modifier.weight(.1f),
-                painter = painterResource(id = R.drawable.transactions_home_vector3),
+                painter = painterResource(id = R.drawable.ic_right_arrow),
                 contentDescription = "transaction type icon",
             )
         }
@@ -104,8 +104,8 @@ private fun Preview() {
             amount = 203.00,
             carbonPoints = 2.44,
             iconConfig = IconConfig(
-                iconDrawable = R.drawable.transactions_home_ellipse_1,
-                iconBgColor = R.drawable.transactions_home_vector2
+                iconDrawable = R.drawable.ic_yellow_circle,
+                iconBgColor = R.drawable.ic_home2
             )
         )
     )

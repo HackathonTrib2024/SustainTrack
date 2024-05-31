@@ -17,8 +17,8 @@ class TransactionViewModel : ViewModel() {
             amount = 203.00,
             carbonPoints = 2.44,
             iconConfig = IconConfig(
-                iconDrawable = R.drawable.transactions_home_ellipse_1,
-                iconBgColor = R.drawable.transactions_home_vector2
+                iconDrawable = R.drawable.ic_yellow_circle,
+                iconBgColor = R.drawable.ic_home2
             )
         ),
         TransactionItem(
@@ -28,8 +28,8 @@ class TransactionViewModel : ViewModel() {
             amount = 500.00,
             carbonPoints = 5.44,
             iconConfig = IconConfig(
-                iconDrawable = R.drawable.transactions_home_ellipse_2,
-                iconBgColor = R.drawable.transactions_home_vector2
+                iconDrawable = R.drawable.ic_blue_circle,
+                iconBgColor = R.drawable.ic_home2
             )
         ),
         TransactionItem(
@@ -39,8 +39,8 @@ class TransactionViewModel : ViewModel() {
             amount = 103.00,
             carbonPoints = 1.44,
             iconConfig = IconConfig(
-                iconDrawable = R.drawable.transactions_home_ellipse_3,
-                iconBgColor = R.drawable.transactions_home_vector2
+                iconDrawable = R.drawable.ic_pink_circle,
+                iconBgColor = R.drawable.ic_home2
             )
         ),
         TransactionItem(
@@ -50,8 +50,8 @@ class TransactionViewModel : ViewModel() {
             amount = 203.00,
             carbonPoints = 2.44,
             iconConfig = IconConfig(
-                iconDrawable = R.drawable.transactions_home_ellipse_4,
-                iconBgColor = R.drawable.transactions_home_vector2
+                iconDrawable = R.drawable.ic_pink_circle,
+                iconBgColor = R.drawable.ic_home2
             )
         ),
         TransactionItem(
@@ -61,8 +61,8 @@ class TransactionViewModel : ViewModel() {
             amount = 1203.00,
             carbonPoints = 0.44,
             iconConfig = IconConfig(
-                iconDrawable = R.drawable.transactions_home_ellipse_3,
-                iconBgColor = R.drawable.transactions_home_vector2
+                iconDrawable = R.drawable.ic_pink_circle,
+                iconBgColor = R.drawable.ic_home2
             )
         ),
         TransactionItem(
@@ -72,8 +72,8 @@ class TransactionViewModel : ViewModel() {
             amount = 500.00,
             carbonPoints = 5.44,
             iconConfig = IconConfig(
-                iconDrawable = R.drawable.transactions_home_ellipse_2,
-                iconBgColor = R.drawable.transactions_home_vector2
+                iconDrawable = R.drawable.ic_blue_circle,
+                iconBgColor = R.drawable.ic_home2
             )
         ),
         TransactionItem(
@@ -83,8 +83,8 @@ class TransactionViewModel : ViewModel() {
             amount = 103.00,
             carbonPoints = 1.44,
             iconConfig = IconConfig(
-                iconDrawable = R.drawable.transactions_home_ellipse_3,
-                iconBgColor = R.drawable.transactions_home_vector2
+                iconDrawable = R.drawable.ic_pink_circle,
+                iconBgColor = R.drawable.ic_home2
             )
         ),
         TransactionItem(
@@ -94,8 +94,8 @@ class TransactionViewModel : ViewModel() {
             amount = 103.00,
             carbonPoints = 1.44,
             iconConfig = IconConfig(
-                iconDrawable = R.drawable.transactions_home_ellipse_3,
-                iconBgColor = R.drawable.transactions_home_vector2
+                iconDrawable = R.drawable.ic_pink_circle,
+                iconBgColor = R.drawable.ic_home2
             )
         ),
         TransactionItem(
@@ -105,8 +105,8 @@ class TransactionViewModel : ViewModel() {
             amount = 203.00,
             carbonPoints = 2.44,
             iconConfig = IconConfig(
-                iconDrawable = R.drawable.transactions_home_ellipse_4,
-                iconBgColor = R.drawable.transactions_home_vector2
+                iconDrawable = R.drawable.ic_pink_circle,
+                iconBgColor = R.drawable.ic_home2
             )
         )
     )

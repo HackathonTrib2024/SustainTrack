@@ -51,7 +51,7 @@ fun NewTrackScreen(
         )
         Image(
             modifier = Modifier.fillMaxWidth(),
-            painter = painterResource(id = R.drawable.track_ellipse_4),
+            painter = painterResource(id = R.drawable.ic_graph_circle),
             contentDescription = "transaction type icon",
         )
         Row(

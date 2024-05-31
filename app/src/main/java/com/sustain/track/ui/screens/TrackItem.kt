@@ -30,7 +30,7 @@ fun TrackItem(
         ) {
             Image(
                 modifier = Modifier.weight(.1f),
-                painter = painterResource(id = R.drawable.track_vector),
+                painter = painterResource(id = R.drawable.ic_car),
                 contentDescription = "transaction type icon",
             )
             Column(

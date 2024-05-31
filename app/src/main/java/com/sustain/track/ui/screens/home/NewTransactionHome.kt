@@ -48,7 +48,7 @@ fun NewTransactionsHome(
             value = "Search Transaction",
             onValueChange = {},
             trailingIcon = {
-                Image(painter = painterResource(id = R.drawable.transactions_home_icon1), contentDescription = "")
+                Image(painter = painterResource(id = R.drawable.ic_search), contentDescription = "")
             },
             modifier = Modifier.fillMaxWidth().padding(bottom = 16.dp)
         )
