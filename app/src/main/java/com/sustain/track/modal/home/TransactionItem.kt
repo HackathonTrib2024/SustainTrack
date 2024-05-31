@@ -6,7 +6,7 @@ data class TransactionItem(
     val amount: Double? = null,
     val date: String? = null,
     val carbonPoints: Double? = null,
-    val iconConfig: IconConfig? = null
+    val iconConfig: IconConfig
 )
 
 data class IconConfig(

@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -22,14 +23,16 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.sustain.track.ui.navigation.BottomNavItem
 import com.sustain.track.ui.navigation.bottomNavList
 import com.sustain.track.ui.notification.NotificationUtils
-import com.sustain.track.ui.screens.home.TransactionsHome
-import com.sustain.track.ui.screens.track.Track
+import com.sustain.track.ui.screens.TopBar
+import com.sustain.track.ui.screens.home.NewTransactionsHome
+import com.sustain.track.ui.screens.track.NewTrackScreen
 import com.sustain.track.ui.theme.SustainTrackTheme
 
 class MainActivity : ComponentActivity() {
@@ -42,6 +45,7 @@ class MainActivity : ComponentActivity() {
                 var selectedItemState by rememberSaveable { mutableIntStateOf(0) }
                 val context = LocalContext.current
                 Scaffold(
+                    topBar = { navController.currentDestination?.route?.let { TopBar(title = it) } },
                     bottomBar = {
                         NavigationBar {
                             bottomNavList.forEachIndexed { index, navItem ->
@@ -60,8 +64,8 @@ class MainActivity : ComponentActivity() {
                                     BadgedBox(badge = {
                                         // Nothing to handle for now
                                     }) {
-                                        Icon(
-                                            imageVector = if (index == selectedItemState) navItem.icon else navItem.icon, // TODO: Replace with your selected icon
+                                        Image(
+                                            painter = painterResource(id = navItem.icon),
                                             contentDescription = navItem.route
                                         )
                                     }
@@ -90,17 +94,17 @@ class MainActivity : ComponentActivity() {
                 ) { innerPadding ->
                     Box(
                         modifier = Modifier
-                            .padding(innerPadding)
                             .fillMaxSize()
+                            .padding(innerPadding)
                     ) {
                         NavHost(
                             navController = navController, startDestination = bottomNavList[0].route
                         ) {
                             composable(route = BottomNavItem.Home.route) {
-                                TransactionsHome()
+                                NewTransactionsHome()
                             }
                             composable(route = BottomNavItem.Track.route) {
-                                Track()
+                                NewTrackScreen()
                             }
                         }
                     }

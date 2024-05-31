@@ -15,7 +15,7 @@ object NotificationUtils {
         val builder = NotificationCompat.Builder(context, CHANNEL_ID)
             .setContentTitle(title)
             .setContentText(content)
-            .setSmallIcon(R.drawable.car)
+            .setSmallIcon(R.drawable.car_gray)
 
         val notificationManager =
             context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
