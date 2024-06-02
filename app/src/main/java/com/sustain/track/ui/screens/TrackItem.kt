@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -22,7 +23,7 @@ fun TrackItem(
     modifier: Modifier = Modifier,
 ) {
     Box(
-        modifier = modifier.padding(0.dp)
+        modifier = modifier
     ) {
         Row(
             horizontalArrangement = Arrangement.Start,
@@ -42,13 +43,13 @@ fun TrackItem(
 
                 Text(
                     text = "Uber",
-                    fontSize = 16.sp,
+                    style = MaterialTheme.typography.labelLarge,
                     color = Color(0xFF512B2B)
                 )
 
                 Text(
                     text = "Mostly used transport",
-                    fontSize = 14.sp,
+                    style = MaterialTheme.typography.labelMedium,
                     color = Color(0xFF512B2B),
                     modifier = Modifier.padding(vertical = 4.dp),
                 )

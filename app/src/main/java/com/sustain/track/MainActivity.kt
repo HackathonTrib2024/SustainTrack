@@ -45,7 +45,7 @@ class MainActivity : ComponentActivity() {
                 var selectedItemState by rememberSaveable { mutableIntStateOf(0) }
                 val context = LocalContext.current
                 Scaffold(
-                    topBar = { navController.currentDestination?.route?.let { TopBar(title = it) } },
+                    topBar = {  TopBar(title = "SustainTrack") },
                     bottomBar = {
                         NavigationBar {
                             bottomNavList.forEachIndexed { index, navItem ->
