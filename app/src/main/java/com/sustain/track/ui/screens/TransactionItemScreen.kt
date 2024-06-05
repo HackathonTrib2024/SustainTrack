@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -35,7 +36,7 @@ fun TransactionItemScreen(
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Image(
-                modifier = Modifier.weight(.1f),
+                modifier = Modifier.size(24.dp).weight(.1f),
                 painter = painterResource(id = item.iconConfig.iconDrawable),
                 contentDescription = "transaction type icon",
             )
@@ -104,7 +105,7 @@ private fun Preview() {
             amount = 203.00,
             carbonPoints = 2.44,
             iconConfig = IconConfig(
-                iconDrawable = R.drawable.ic_yellow_circle,
+                iconDrawable = R.drawable.ic_cart_shopping,
                 iconBgColor = R.drawable.ic_home2
             )
         )

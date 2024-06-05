@@ -1,5 +1,6 @@
 package com.sustain.track.ui.screens.home
 
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.ViewModel
 import com.jaikeerthick.composable_graphs.composables.pie.model.PieData
@@ -21,7 +22,7 @@ class TransactionViewModel : ViewModel() {
             amount = 203.00,
             carbonPoints = 2.44,
             iconConfig = IconConfig(
-                iconDrawable = R.drawable.ic_yellow_circle,
+                iconDrawable = R.drawable.ic_cart_shopping,
                 iconBgColor = R.drawable.ic_home2
             )
         ),
@@ -32,7 +33,7 @@ class TransactionViewModel : ViewModel() {
             amount = 500.00,
             carbonPoints = 5.44,
             iconConfig = IconConfig(
-                iconDrawable = R.drawable.ic_blue_circle,
+                iconDrawable = R.drawable.ic_taxi,
                 iconBgColor = R.drawable.ic_home2
             )
         ),
@@ -43,7 +44,7 @@ class TransactionViewModel : ViewModel() {
             amount = 103.00,
             carbonPoints = 1.44,
             iconConfig = IconConfig(
-                iconDrawable = R.drawable.ic_pink_circle,
+                iconDrawable = R.drawable.ic_shirt,
                 iconBgColor = R.drawable.ic_home2
             )
         ),
@@ -54,7 +55,7 @@ class TransactionViewModel : ViewModel() {
             amount = 203.00,
             carbonPoints = 2.44,
             iconConfig = IconConfig(
-                iconDrawable = R.drawable.ic_pink_circle,
+                iconDrawable = R.drawable.ic_cart_shopping,
                 iconBgColor = R.drawable.ic_home2
             )
         ),
@@ -65,7 +66,7 @@ class TransactionViewModel : ViewModel() {
             amount = 1203.00,
             carbonPoints = 0.44,
             iconConfig = IconConfig(
-                iconDrawable = R.drawable.ic_pink_circle,
+                iconDrawable = R.drawable.ic_bus,
                 iconBgColor = R.drawable.ic_home2
             )
         ),
@@ -76,7 +77,7 @@ class TransactionViewModel : ViewModel() {
             amount = 500.00,
             carbonPoints = 5.44,
             iconConfig = IconConfig(
-                iconDrawable = R.drawable.ic_blue_circle,
+                iconDrawable = R.drawable.ic_taxi,
                 iconBgColor = R.drawable.ic_home2
             )
         ),
@@ -87,7 +88,7 @@ class TransactionViewModel : ViewModel() {
             amount = 103.00,
             carbonPoints = 1.44,
             iconConfig = IconConfig(
-                iconDrawable = R.drawable.ic_pink_circle,
+                iconDrawable = R.drawable.ic_medical,
                 iconBgColor = R.drawable.ic_home2
             )
         ),
@@ -98,7 +99,7 @@ class TransactionViewModel : ViewModel() {
             amount = 103.00,
             carbonPoints = 1.44,
             iconConfig = IconConfig(
-                iconDrawable = R.drawable.ic_pink_circle,
+                iconDrawable = R.drawable.ic_shirt,
                 iconBgColor = R.drawable.ic_home2
             )
         ),
@@ -109,16 +110,16 @@ class TransactionViewModel : ViewModel() {
             amount = 203.00,
             carbonPoints = 2.44,
             iconConfig = IconConfig(
-                iconDrawable = R.drawable.ic_pink_circle,
+                iconDrawable = R.drawable.ic_cart_shopping,
                 iconBgColor = R.drawable.ic_home2
             )
         )
     )
 
     val pieChartData = listOf(
-        PieData(value = 130F, label = "Cloths"),
-        PieData(value = 260F, label = "Groceries"),
-        PieData(value = 500F, label = "Fuel"),
+        PieData(value = 130F, label = "Cloths", color = Color(0xFF084D85)),
+        PieData(value = 260F, label = "Groceries", color = Color(0xFF118AEB)),
+        PieData(value = 500F, label = "Fuel", color = Color(0xFF64B5F6)),
     )
 
     val pieChartStyle = PieChartStyle(

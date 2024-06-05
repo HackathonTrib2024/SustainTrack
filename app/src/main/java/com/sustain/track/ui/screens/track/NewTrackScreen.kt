@@ -12,7 +12,9 @@ import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Card
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
@@ -33,7 +35,7 @@ import com.sustain.track.ui.screens.home.TransactionViewModel
 
 @Composable
 fun NewTrackScreen(
-    modifier: Modifier = Modifier,
+    modifier: Modifier = Modifier.verticalScroll(rememberScrollState()),
     viewModel: TransactionViewModel = viewModel(),
 ) {
     Column(
@@ -90,13 +92,9 @@ fun NewTrackScreen(
             color = Color(0xFF512B2B),
             style = MaterialTheme.typography.labelLarge,
         )
-        LazyColumn(
-            verticalArrangement = Arrangement.spacedBy(16.dp)
-        ) {
-            items(viewModel.transactions) { item ->
-                TipsCard()
-            }
-        }
+        TipsCard(modifier = Modifier.padding(top = 16.dp, bottom = 8.dp))
+        TipsCard(modifier = Modifier.padding(bottom = 8.dp))
+        TipsCard(modifier = Modifier.padding(bottom = 8.dp))
     }
 }
 

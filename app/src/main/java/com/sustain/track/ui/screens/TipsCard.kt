@@ -37,7 +37,7 @@ fun TipsCard(modifier: Modifier = Modifier) {
                 Text(
                     modifier = Modifier.padding(bottom = 8.dp),
                     text = "Public transport",
-                    color = Color(0xFFFB4F00),
+                    color = Color(0xFF084D85),
                     style = MaterialTheme.typography.labelLarge,
                 )
                 Text(

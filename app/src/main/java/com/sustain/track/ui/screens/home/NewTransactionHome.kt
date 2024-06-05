@@ -4,6 +4,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -50,7 +51,9 @@ fun NewTransactionsHome(
             trailingIcon = {
                 Image(painter = painterResource(id = R.drawable.ic_search), contentDescription = "")
             },
-            modifier = Modifier.fillMaxWidth().padding(bottom = 16.dp)
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(bottom = 16.dp)
         )
 
         Text(
@@ -66,26 +69,39 @@ fun NewTransactionsHome(
             fontSize = 14.sp,
             color = Color(0xFF512B2B)
         )
-        Text(
-            text = "Available amount",
-            fontFamily = FontFamily.Default,
-            fontSize = 14.sp,
-            color = Color(0xFF512B2B)
-        )
+        Row(
+            horizontalArrangement = Arrangement.SpaceBetween,
+        ) {
+            Text(
+                text = "Available amount:",
+                fontFamily = FontFamily.Default,
+                fontSize = 14.sp,
+                color = Color(0xFF512B2B)
+            )
+            Text(
+                text = "222 222,23",
+                modifier = Modifier.fillMaxWidth(),
+                fontFamily = FontFamily.Default,
+                fontSize = 14.sp,
+                textAlign = TextAlign.End,
+                color = Color(0xFF512B2B)
+            )
+        }
+
         Button(
             onClick = { /*TODO*/ },
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(top = 16.dp),
             colors = ButtonDefaults
-                .buttonColors(containerColor = Color(0xFFDBF8ED)),
+                .buttonColors(containerColor = Color(0xFF64B5F6)),
             contentPadding = ButtonDefaults.TextButtonContentPadding
 
         ) {
             Text(
                 text = "Pay or transfer from account",
                 textAlign = TextAlign.Center,
-                color = Color(0xFF257886)
+                color = Color(0xFFF9FBE7)
             )
         }
         Text(
