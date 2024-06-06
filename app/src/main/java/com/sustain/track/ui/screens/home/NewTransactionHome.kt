@@ -33,7 +33,7 @@ import com.sustain.track.ui.screens.TransactionItemScreen
 @Composable
 fun NewTransactionsHome(
     modifier: Modifier = Modifier,
-    viewModel: TransactionViewModel = viewModel()
+    viewModel: TransactionViewModel = viewModel(),
 ) {
     Column(
         modifier = modifier
@@ -43,25 +43,14 @@ fun NewTransactionsHome(
             .padding(16.dp),
         verticalArrangement = Arrangement.Top,
     ) {
-        TextField(
-            value = "Search Transaction",
-            onValueChange = {},
-            trailingIcon = {
-                Image(painter = painterResource(id = R.drawable.ic_search), contentDescription = "")
-            },
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(bottom = 16.dp)
-        )
-
         Text(
-            text = "Privatkonto",
+            text = "My Account",
             fontFamily = FontFamily.Default,
             fontSize = 20.sp,
             color = Color(0xFF512B2B)
         )
         Text(
-            text = "8417-8,4 724 675-6",
+            text = "1111-1,1 111 111-6",
             modifier = Modifier.padding(bottom = 4.dp, top = 4.dp),
             fontFamily = FontFamily.Default,
             fontSize = 14.sp,
@@ -71,7 +60,7 @@ fun NewTransactionsHome(
             horizontalArrangement = Arrangement.SpaceBetween,
         ) {
             Text(
-                text = "Available amount:",
+                text = "Current Balance:",
                 fontFamily = FontFamily.Default,
                 fontSize = 14.sp,
                 color = Color(0xFF512B2B)
@@ -104,11 +93,21 @@ fun NewTransactionsHome(
 
         ) {
             Text(
-                text = "Pay or transfer from account",
+                text = "Make Payment",
                 textAlign = TextAlign.Center,
                 color = Color(0xFFF9FBE7)
             )
         }
+//        TextField(
+//            value = "Search Transaction",
+//            onValueChange = {},
+//            trailingIcon = {
+//                Image(painter = painterResource(id = R.drawable.ic_search), contentDescription = "")
+//            },
+//            modifier = Modifier
+//                .fillMaxWidth()
+//                .padding(top = 16.dp)
+//        )
         Text(
             text = "Transactions",
             fontFamily = FontFamily.Default,
