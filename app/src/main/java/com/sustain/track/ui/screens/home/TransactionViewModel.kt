@@ -9,9 +9,16 @@ import com.jaikeerthick.composable_graphs.composables.pie.style.PieChartVisibili
 import com.sustain.track.R
 import com.sustain.track.modal.home.IconConfig
 import com.sustain.track.modal.home.TransactionItem
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.asStateFlow
 
 
 class TransactionViewModel : ViewModel() {
+    private var _isFromNotification = MutableStateFlow(false)
+    val isFromNotification = _isFromNotification.asStateFlow()
+    fun setIsLaunchedFromNotification(fromNotification: Boolean) {
+        _isFromNotification.value = fromNotification
+    }
 
 
     val transactions = listOf(
@@ -116,11 +123,17 @@ class TransactionViewModel : ViewModel() {
         )
     )
 
-    val pieChartData = listOf(
+    val pieChartData = if (isFromNotification.value) listOf(
+        PieData(value = 500F, label = "Fuel", color = Color(0xFF64B5F6)),
+    ) else listOf(
         PieData(value = 130F, label = "Cloths", color = Color(0xFF084D85)),
         PieData(value = 260F, label = "Groceries", color = Color(0xFF118AEB)),
         PieData(value = 500F, label = "Fuel", color = Color(0xFF64B5F6)),
     )
+
+    fun getSuggestionText() =
+        if (isFromNotification.value) "Your have emitted 2.4 kg CO2 for Uber "
+        else "Your have emitted 68 kg CO2 this month"
 
     val pieChartStyle = PieChartStyle(
         visibility = PieChartVisibility(

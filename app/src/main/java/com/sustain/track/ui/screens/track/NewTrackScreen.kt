@@ -10,8 +10,6 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.requiredHeight
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
@@ -26,7 +24,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.jaikeerthick.composable_graphs.composables.pie.PieChart
 import com.sustain.track.ui.screens.TipsCard
@@ -37,7 +34,12 @@ import com.sustain.track.ui.screens.home.TransactionViewModel
 fun NewTrackScreen(
     modifier: Modifier = Modifier.verticalScroll(rememberScrollState()),
     viewModel: TransactionViewModel = viewModel(),
+    isLaunchedFromNotification: Boolean = false,
 ) {
+
+    if (isLaunchedFromNotification)
+        viewModel.setIsLaunchedFromNotification(true)
+
     Column(
         modifier = modifier
             .background(Color(0xFFFDF6EE))
@@ -51,7 +53,7 @@ fun NewTrackScreen(
         )
         Text(
             modifier = Modifier.padding(top = 8.dp, bottom = 16.dp),
-            text = "Your have emitted 68 kg CO2 this month",
+            text = viewModel.getSuggestionText(),
             style = MaterialTheme.typography.labelMedium,
             color = Color(0xFF512B2B)
         )

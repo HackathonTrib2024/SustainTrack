@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.ui.Modifier
+import com.sustain.track.ui.notification.NotificationUtils.INTENT_FROM_NOTIFICATION_KEY
 import com.sustain.track.ui.screens.TopBar
 import com.sustain.track.ui.screens.track.NewTrackScreen
 import com.sustain.track.ui.theme.SustainTrackTheme
@@ -18,6 +19,8 @@ class NotificationActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
+            val isLaunchedFromNotification =
+                intent.getBooleanExtra(INTENT_FROM_NOTIFICATION_KEY, false)
             SustainTrackTheme {
                 Scaffold(
                     topBar = { TopBar(title = "SustainTrack") },
@@ -27,7 +30,7 @@ class NotificationActivity : ComponentActivity() {
                             .fillMaxSize()
                             .padding(innerPadding)
                     ) {
-                        NewTrackScreen()
+                        NewTrackScreen(isLaunchedFromNotification = isLaunchedFromNotification)
                     }
                 }
             }

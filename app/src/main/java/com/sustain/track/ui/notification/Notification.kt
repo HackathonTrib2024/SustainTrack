@@ -12,7 +12,7 @@ import com.sustain.track.R
 object NotificationUtils {
 
     private const val CHANNEL_ID = "SustainTrack_channel_id"
-    private const val INTENT_FROM_NOTIFICATION_KEY = "from_notification"
+    const val INTENT_FROM_NOTIFICATION_KEY = "from_notification"
 
     fun showNotification(context: Context, title: String, content: String) {
 
