@@ -29,6 +29,7 @@ import com.sustain.track.ui.screens.home.NewTransactionsHome
 import com.sustain.track.ui.screens.track.NewTrackScreen
 import com.sustain.track.ui.theme.SustainTrackTheme
 
+// adding dummy comments
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
