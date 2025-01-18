@@ -1,1 +1,2 @@
 adding 1 line
+stash 1
