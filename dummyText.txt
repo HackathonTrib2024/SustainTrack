@@ -1,2 +1,7 @@
 adding 1 line
+<<<<<<< Updated upstream
 stash 1
+=======
+stash 1
+stash 2
+>>>>>>> Stashed changes
